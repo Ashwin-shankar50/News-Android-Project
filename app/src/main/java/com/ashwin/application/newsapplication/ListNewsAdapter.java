@@ -60,15 +60,11 @@ class ListNewsAdapter extends BaseAdapter {
         try{
             holder.title.setText(news.get(MainActivity.KEY_TITLE));
             holder.sdetails.setText(news.get(MainActivity.KEY_DESCRIPTION));
-            if(news.get(MainActivity.KEY_URLTOIMAGE).toString().length() < 5)
-            {
-                holder.galleryImage.setVisibility(View.GONE);
-            }else{
                 Picasso.with(activity)
                         .load(news.get(MainActivity.KEY_URLTOIMAGE).toString())
                         .resize(300, 200)
                         .into(holder.galleryImage);
-            }
+
         }
         catch(Exception e) {}
         return view;
