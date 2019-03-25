@@ -16,6 +16,8 @@ import java.util.HashMap;
 
 
 class ListNewsAdapter extends BaseAdapter {
+    ImageView galleryImage;
+    TextView title, sdetails;
     private Activity activity;
     private ArrayList<HashMap<String, String>> data;
 
