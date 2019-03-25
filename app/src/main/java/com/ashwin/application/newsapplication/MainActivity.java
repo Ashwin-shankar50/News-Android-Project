@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             String line = "";
 
             try {
-                URL myapi = new URL("https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=0baa683f251d461b9f4e8f44ab6e72bb");
+                URL myapi = new URL("https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=0baa683f251d461b9f4e8f44ab6e72bb");
                 HttpURLConnection httpURLConnection = (HttpURLConnection) myapi.openConnection();
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
